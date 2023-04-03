@@ -1689,4 +1689,7 @@
     --br-xl: 20px;
     --br-mini: 15px;
   }
-  
+  .laptop{
+    margin:auto;
+    max-width: 1024px;
+  }
