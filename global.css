@@ -21,6 +21,12 @@ body {
   --font-size-11xl: 30px;
   --font-size-sm: 14px;
   --font-size-mm: 27px;
+  --font-size-mp: 11px;
+  --font-size-mf: 8px;
+  --font-size-cr: 16px;
+  --font-size-11: 10px;
+  --font-size-12: 15px;
+  --font-size-13: 13px;
   /* Colors */
   --color-black: #000;
   --color-rosybrown-100: #da9191;
