@@ -18,7 +18,9 @@ body {
   --font-size-21xl: 40px;
   --font-size-29xl: 48px;
   --font-size-lgi: 19px;
-
+  --font-size-11xl: 30px;
+  --font-size-sm: 14px;
+  --font-size-mm: 27px;
   /* Colors */
   --color-black: #000;
   --color-rosybrown-100: #da9191;
