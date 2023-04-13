@@ -1,0 +1,42 @@
+.laptop{
+  margin:auto;
+  max-width: 1024px;
+}
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-courier-new: "Courier New";
+
+  /* font sizes */
+  --font-size-13xl: 32px;
+  --font-size-xl: 20px;
+  --font-size-5xl: 24px;
+  --font-size-21xl: 40px;
+  --font-size-29xl: 48px;
+  --font-size-lgi: 19px;
+  --font-size-11xl: 30px;
+  --font-size-sm: 14px;
+  --font-size-mm: 27px;
+  --font-size-mp: 11px;
+  --font-size-mf: 8px;
+  --font-size-cr: 16px;
+  --font-size-11: 10px;
+  --font-size-12: 15px;
+  --font-size-13: 13px;
+  /* Colors */
+  --color-black: #000;
+  --color-rosybrown-100: #da9191;
+  --color-rosybrown-200: #d18888;
+  --color-white: #fff;
+  --color-lightpink: #e29b9b;
+
+  /* border radiuses */
+  --br-3xs: 10px;
+  --br-8xs: 5px;
+  --br-41xl: 60px;
+  --br-11xl: 30px;
+}
