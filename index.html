@@ -4,14 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" href="./global.css" />
-     <script src="main.js"></script>
+    <script src="script.js"></script> 
     <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
       link="https://fonts.googleapis.com/css2?family=Courier New:wght@400&display=swap"
     />
   </head>
-  <body>
+  
 
     <div class="laptop">
       <div class="footer">
@@ -198,54 +198,78 @@
         </div>
         <img class="ring-icon" alt="" src="assets/png/ring@2x.png" />
       </div>
-      <form class="kartinki">
-        <div class="kartinki-btns">
-          <div class="ekskl">
-            <div class="ekskl-child"></div>
-            <div class="div21">Эксклюзив</div>
+      <section class="photo">
+        <div class="container">
+          <div class="kartinki__buttons photo__buttons">
+              <button class="buttonn button_color" data-season="spring">Эксклюзив</button>
+              <button class="buttonn" data-season="winter">Скидки</button>
+              <button class="buttonn" data-season="autumn">Популярное</button>
           </div>
-          <div class="skidki">
-            <div class="skidki-child"></div>
-            <div class="div22">Скидки</div>
-          </div>
-          <div class="popylar">
-            <button class="popylar-child"></button
-            ><button class="button4">Популярное</button>
-          </div>
-        </div>
-        <div class="kartinki-items">
-         <div class="kartini1">
-          <div class="img1">
+         <div class="kartinki_items">
             <img class="img11" alt="" src="assets/jpg/rectangle-53@2x.jpg"/>
-            </div>
-         </div>
-         <div class="kartini2">
-          <div class="img2">
             <img class="img22" alt="" src="assets/jpg/rectangle-54@2x.jpg"/>
-            </div>
-         </div>
-         <div class="kartini3">
-          <div class="img3">
             <img class="img33" alt="" src="assets/jpg/rectangle-55@2x.jpg"/>
-            </div>
-         </div>
-         <div class="kartini4">
-          <div class="img4">
             <img class="img44" alt="" src="assets/jpg/rectangle-56@2x.jpg"/>
-            </div>
-         </div>
-         <div class="kartini5">
-          <div class="img5">
             <img class="img55" alt="" src="assets/jpg/rectangle-57@2x.jpg"/>
-            </div>
-         </div>
-         <div class="kartini6">
-          <div class="img6">
             <img class="img66" alt="" src="assets/jpg/rectangle-58@2x.jpg"/>
-            </div>
          </div>
         </div>
-      </form>
+      </section>
+      <script>
+        const seasons = {
+  winter: [
+    'assets/jpg/1.jpeg',
+    'assets/jpg/2.jpeg',
+    'assets/jpg/3.jpeg',
+    'assets/jpg/4.jpeg',
+    'assets/jpg/5.jpeg',
+    'assets/jpg/6.jpeg',
+  ],
+  spring: [
+    'assets/jpg/rectangle-53@2x.jpg',
+    'assets/jpg/rectangle-54@2x.jpg',
+    'assets/jpg/rectangle-55@2x.jpg',
+    'assets/jpg/rectangle-56@2x.jpg',
+    'assets/jpg/rectangle-57@2x.jpg',
+    'assets/jpg/rectangle-58@2x.jpg',
+  ],
+  
+  autumn: [
+    'assets/jpg/7.jpeg',
+    'assets/jpg/8.jpeg',
+    'assets/jpg/9.jpeg',
+    'assets/jpg/10.jpeg',
+    'assets/jpg/11.jpeg',
+    'assets/jpg/12.jpeg',
+  ],
+}
+
+
+function changeImage (event) {
+  const season = event.target.dataset.season;
+  const seasonImages = document.querySelector('.kartinki_items').children;
+  Array.from(seasonImages).forEach((image, index) => image.src = seasons[season][index]);
+  // Array.from(seasonImages).forEach((image, index) => image.src = './assets/seasons/' + season + '/' + (index + 1) + '.jpg');
+  
+  const buttons = document.querySelector('.photo__buttons').children;
+  Array.from(buttons).forEach(button => {
+    if (button.dataset.season == season) {
+      button.classList.add('button_color');
+    } else {
+      button.classList.remove('button_color');
+    };
+  });
+  
+};
+
+function buttonClick (event) {
+  if (event.target.classList.contains('buttonn')) {
+    changeImage (event);
+  };
+};
+
+document.querySelector('.photo__buttons').addEventListener('click', buttonClick);
+      </script>
       <div class="katalog" data-scroll-to="katalog">
         <div class="items">
           <img class="pngwing-1-icon" alt="" src="assets/png/pngwing-1@2x.png" />
