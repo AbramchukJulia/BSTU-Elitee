@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" href="./global.css" />
-    <script src="script.js"></script> 
     <link rel="stylesheet" href="./style.css" />
     <link
       rel="stylesheet"
@@ -200,56 +199,126 @@
       </div>
       <section class="photo">
         <div class="container">
-          <div class="kartinki__buttons photo__buttons">
-              <button class="buttonn button_color" data-season="spring">Эксклюзив</button>
-              <button class="buttonn" data-season="winter">Скидки</button>
-              <button class="buttonn" data-season="autumn">Популярное</button>
+          <div class="photo__buttons">
+            <button class="buttonn button_color" data-season="winter">Эксклюзив</button>
+            <button class="buttonn" data-season="spring">Скидки</button>
+            <button class="buttonn" data-season="summer">Популярное</button>
+            
           </div>
-         <div class="kartinki_items">
-            <img class="img11" alt="" src="assets/jpg/rectangle-53@2x.jpg"/>
-            <img class="img22" alt="" src="assets/jpg/rectangle-54@2x.jpg"/>
-            <img class="img33" alt="" src="assets/jpg/rectangle-55@2x.jpg"/>
-            <img class="img44" alt="" src="assets/jpg/rectangle-56@2x.jpg"/>
-            <img class="img55" alt="" src="assets/jpg/rectangle-57@2x.jpg"/>
-            <img class="img66" alt="" src="assets/jpg/rectangle-58@2x.jpg"/>
-         </div>
+          <div class="photo__slider">
+            <div class="slider">
+              <div class="photo__image slider_left">
+                <img src="assets/jpg/rectangle-53@2x.jpg" alt="image 1">
+                <img src="assets/jpg/rectangle-54@2x.jpg" alt="image 2">
+                <img src="assets/jpg/rectangle-55@2x.jpg" alt="image 3">
+                <img src="assets/jpg/rectangle-56@2x.jpg" alt="image 4">
+                <img src="assets/jpg/rectangle-57@2x.jpg" alt="image 5">
+                <img src="assets/jpg/rectangle-58@2x.jpg" alt="image 6">
+                <img src="assets/jpg/13.jpeg" alt="image 7" hidden>
+                <img src="assets/jpg/14.jpeg" alt="image 8" hidden>
+                <img src="assets/jpg/15.jpeg" alt="image 9" hidden>
+                <img src="assets/jpg/16.jpeg" alt="image 10" hidden>
+                <img src="assets/jpg/17.jpeg" alt="image 11" hidden>
+                <img src="assets/jpg/18.jpeg" alt="image 12" hidden>
+            </div>
+              <div class="photo__image slider_center">
+                <img src="assets/jpg/rectangle-53@2x.jpg" alt="image 1" id="a">
+                <img src="assets/jpg/rectangle-54@2x.jpg" alt="image 2" id="b">
+                <img src="assets/jpg/rectangle-55@2x.jpg" alt="image 3" id="c">
+                <img src="assets/jpg/rectangle-56@2x.jpg" alt="image 4" id="d">
+                <img src="assets/jpg/rectangle-57@2x.jpg" alt="image 5" id="h">
+                <img src="assets/jpg/rectangle-58@2x.jpg" alt="image 6" id="j">
+                <img src="assets/jpg/13.jpeg" alt="image 7" hidden>
+                <img src="assets/jpg/14.jpeg" alt="image 8" hidden>
+                <img src="assets/jpg/15.jpeg" alt="image 9" hidden>
+                <img src="assets/jpg/16.jpeg" alt="image 10" hidden>
+                <img src="assets/jpg/17.jpeg" alt="image 11" hidden>
+                <img src="assets/jpg/18.jpeg" alt="image 12" hidden>
+             </div>
+              <div class="photo__image slider_right">
+                <img src="assets/jpg/rectangle-53@2x.jpg" alt="image 1">
+                <img src="assets/jpg/rectangle-54@2x.jpg" alt="image 2">
+                <img src="assets/jpg/rectangle-55@2x.jpg" alt="image 1">
+                <img src="assets/jpg/rectangle-56@2x.jpg" alt="image 2">
+                <img src="assets/jpg/rectangle-57@2x.jpg" alt="image 1">
+                <img src="assets/jpg/rectangle-58@2x.jpg" alt="image 2">
+                <img src="assets/jpg/13.jpeg" alt="image 3" hidden>
+                <img src="assets/jpg/14.jpeg" alt="image 3" hidden>
+                <img src="assets/jpg/15.jpeg" alt="image 3" hidden>
+                <img src="assets/jpg/16.jpeg" alt="image 3" hidden>
+                <img src="assets/jpg/17.jpeg" alt="image 3" hidden>
+                <img src="assets/jpg/18.jpeg" alt="image 3" hidden>
+             </div>
+            </div>
+            <div class="arrows">
+              <button class="button_slider_left"><--</button>
+              <button class="button_slider_right">--></button>
+            </div>
+          </div>
         </div>
       </section>
+
       <script>
-        const seasons = {
+     const seasons = {
   winter: [
-    'assets/jpg/1.jpeg',
-    'assets/jpg/2.jpeg',
-    'assets/jpg/3.jpeg',
-    'assets/jpg/4.jpeg',
-    'assets/jpg/5.jpeg',
-    'assets/jpg/6.jpeg',
-  ],
-  spring: [
     'assets/jpg/rectangle-53@2x.jpg',
     'assets/jpg/rectangle-54@2x.jpg',
     'assets/jpg/rectangle-55@2x.jpg',
     'assets/jpg/rectangle-56@2x.jpg',
     'assets/jpg/rectangle-57@2x.jpg',
     'assets/jpg/rectangle-58@2x.jpg',
+    'assets/jpg/13.jpeg',
+    'assets/jpg/14.jpeg',
+    'assets/jpg/15.jpeg',
+    'assets/jpg/16.jpeg',
+    'assets/jpg/17.jpeg',
+    'assets/jpg/18.jpeg',
+  ],
+  spring: [
+  "assets/jpg/1.jpeg",
+  "assets/jpg/2.jpeg",
+  "assets/jpg/3.jpeg",
+  "assets/jpg/4.jpeg",
+  "assets/jpg/5.jpeg",
+  "assets/jpg/6.jpeg",
+  "assets/jpg/19.jpeg",
+  "assets/jpg/20.jpeg",
+  "assets/jpg/21.jpeg",
+  "assets/jpg/22.jpeg",
+  "assets/jpg/23.jpeg",
+  "assets/jpg/24.jpeg",
+    
+  ],
+  summer: [
+  "assets/jpg/7.jpeg",
+  "assets/jpg/8.jpeg",
+  "assets/jpg/9.jpeg",
+  "assets/jpg/10.jpeg",
+  "assets/jpg/11.jpeg",
+  "assets/jpg/12.jpeg",
+  "assets/jpg/25.jpeg",
+  "assets/jpg/26.jpeg",
+  "assets/jpg/27.jpeg",
+  "assets/jpg/28.jpeg",
+  "assets/jpg/29.jpeg",
+  "assets/jpg/30.jpeg",
   ],
   
-  autumn: [
-    'assets/jpg/7.jpeg',
-    'assets/jpg/8.jpeg',
-    'assets/jpg/9.jpeg',
-    'assets/jpg/10.jpeg',
-    'assets/jpg/11.jpeg',
-    'assets/jpg/12.jpeg',
-  ],
 }
 
+const imagesLeft = Array.from(document.querySelector('.slider_left').children);
+const imagesCenter = Array.from(document.querySelector('.slider_center').children);
+const imagesRight = Array.from(document.querySelector('.slider_right').children);
+
+let season = 'winter';
+
+function redrawPhoto(arr) {
+  arr.forEach((image, index) => image.src = seasons[season][index]);
+}
 
 function changeImage (event) {
-  const season = event.target.dataset.season;
-  const seasonImages = document.querySelector('.kartinki_items').children;
-  Array.from(seasonImages).forEach((image, index) => image.src = seasons[season][index]);
-  // Array.from(seasonImages).forEach((image, index) => image.src = './assets/seasons/' + season + '/' + (index + 1) + '.jpg');
+  season = event.target.dataset.season;
+  redrawPhoto(imagesCenter);
   
   const buttons = document.querySelector('.photo__buttons').children;
   Array.from(buttons).forEach(button => {
@@ -269,6 +338,50 @@ function buttonClick (event) {
 };
 
 document.querySelector('.photo__buttons').addEventListener('click', buttonClick);
+
+//slider
+function shiftPhoto(arrow) {
+  const w = window.innerWidth >= 768 ? 2 : 1;
+  if (arrow == 'left') {
+    seasons[season] = seasons[season].slice(w).concat(seasons[season].slice(0, w));
+  } else if (arrow == 'right') {
+    seasons[season] = seasons[season].slice(-w).concat(seasons[season].slice(0, -w));
+  }
+}
+
+const slider = document.querySelector('.slider');
+
+const buttonLeft = document.querySelector('.button_slider_left');
+const buttonRight = document.querySelector('.button_slider_right');
+
+function sliderLeft() {
+  buttonLeft.removeEventListener('click', sliderRight);
+  buttonRight.removeEventListener('click', sliderLeft);
+  slider.classList.add('move_left');
+  shiftPhoto('left');
+  redrawPhoto(imagesRight);
+};
+
+function sliderRight() {
+  buttonLeft.removeEventListener('click', sliderRight);
+  buttonRight.removeEventListener('click', sliderLeft);
+  slider.classList.add('move_right');
+  shiftPhoto('right');
+  redrawPhoto(imagesLeft);
+};
+
+slider.addEventListener('animationend', () => {
+  redrawPhoto(imagesCenter);
+  slider.classList.remove('move_left');
+  slider.classList.remove('move_right');
+  buttonLeft.addEventListener('click', sliderRight);
+  buttonRight.addEventListener('click', sliderLeft);
+});
+
+
+buttonLeft.addEventListener('click', sliderRight);
+buttonRight.addEventListener('click', sliderLeft);
+
       </script>
       <div class="katalog" data-scroll-to="katalog">
         <div class="items">
@@ -374,10 +487,17 @@ document.querySelector('.photo__buttons').addEventListener('click', buttonClick)
           <img class="nav-child" alt="" src="assets/svg/line-1.svg" />
            </div>
         <div class="up">
+          
           <div class="korzina">
-            <button class="korzina-child" id="rectangleButton5"></button
-            ><button class="pngwing-22" id="pngwing22"></button
-            ><button class="button5" id="button5">Корзина</button>
+            <div class="korz"><a href="./calc.html"> Корзина</a>
+            <style> a{
+              color: black;
+              text-decoration: none;
+            }
+            </style></div>
+            <button class="korzina-child"  id="rectangleButton5">
+              </button>
+            
           </div>
           <div class="elite2">
             <img class="elite-1-icon" alt="" src="assets/png/elite-1@2x.png" />
